@@ -3,18 +3,20 @@ package com.example.springrest6mvb.service;
 import com.example.springrest6mvb.model.Customer;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface CustomerService {
-	List<Customer> listCustomer();
 
-	Customer getCustomerById(UUID customerId);
+	Optional<Customer> getCustomerById(UUID uuid);
 
-	Customer saveCustomer(Customer customer);
+	List<Customer> getAllCustomers();
 
-	void updateCustomer(UUID customerId, Customer customer);
+	Customer saveNewCustomer(Customer customer);
 
-	void deleteCustomer(UUID id);
+	void updateCustomerById(UUID customerId, Customer customer);
+
+	void deleteCustomerById(UUID customerId);
 
 	void patchCustomerById(UUID customerId, Customer customer);
 }
