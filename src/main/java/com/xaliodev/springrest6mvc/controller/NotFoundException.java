@@ -1,4 +1,4 @@
-package com.example.springrest6mvb.controller;
+package com.xaliodev.springrest6mvc.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

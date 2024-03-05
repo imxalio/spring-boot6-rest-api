@@ -1,4 +1,4 @@
-package com.example.springrest6mvb.model;
+package com.xaliodev.springrest6mvc.model;
 
 
 import lombok.Builder;
@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Data
 @Builder
-public class Beer {
+public class BeerDTO {
 	private UUID id;
 	private Integer version;
 	private String beerName;
