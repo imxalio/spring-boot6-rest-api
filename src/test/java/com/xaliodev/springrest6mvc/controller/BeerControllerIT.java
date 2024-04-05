@@ -65,8 +65,8 @@ class BeerControllerIT {
 	}
 
 	@Test
-		//	@Transactional
-		//	@Rollback
+	@Transactional
+	@Rollback
 	void testEmptyList() {
 		beerRepository.deleteAll();
 		List<BeerDTO> listBeers = beerController.listBeers();
@@ -75,9 +75,12 @@ class BeerControllerIT {
 
 	@Test
 	void testGetById() {
+
 		Beer beer = beerRepository.findAll()
 		                          .get(0);
-		assertThat(beerController.getBeerById(beer.getId())).isNotNull();
+		BeerDTO dto = beerController.getBeerById(beer.getId());
+
+		assertThat(dto).isNotNull();
 	}
 
 	@Test
